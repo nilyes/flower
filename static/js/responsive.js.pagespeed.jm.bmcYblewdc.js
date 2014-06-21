@@ -985,34 +985,6 @@ $.fn.iscrollControls = function(iscroller) {
                 });
             });
         };
-        this.getMoreData = function(moreObj, startIdx, endIdx) {
-            var fold;
-            var local_position;
-            var oldStories = $(moreObj.listContEl).find("li").size();
-            var slotname = $(moreObj.modEl).find(".localvmslot").html();
-            $.get("ajax.jsp?m=localstories&p=news&more=true&zip=" + self.slot + "&localmore=" + moreObj.currMoreClickCnt + "&slot=" + slotname + "&forceTotal=" + endIdx,
-            function(data) {
-                if (data != "") {
-                    $("#local_stories_list").html(data);
-                    $(moreObj.listContEl).attr("class", "localmore lnid-sec3_lnk" + moreObj.currMoreClickCnt);
-                    self.bindToolTips();
-                    fold = $(window).height() + $(window).scrollTop();
-                    local_position = $("#localstories").offset().top + $("#localstories").height();
-                    if (fold < local_position) {
-                        document.getElementById("localStoryFooter").scrollIntoView(false);
-                    }
-                    var newStory = $(moreObj.listContEl).children().get(oldStories).children[1];
-                    fcs(newStory);
-                } else {
-                    if (self.getMoreLinkTarget() != "") {
-                        window.open(self.getMorelinkHref());
-                    } else {
-                        doc.location = self.getMorelinkHref();
-                    }
-                }
-            },
-            "html");
-        };
     }
     function ChooseNewsMore() {
         var self = this;
