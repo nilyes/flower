@@ -11,7 +11,7 @@ func main() {
 	martini.Env = martini.Prod
 
 	m := martini.Classic()
-	m.Use(martini.GzipHandler())
+	m.Use(martini.Gzip())
 	m.Use(martini.ContextRender("2fd4e1c67a2d28fced849ee1bb76e7391b93eb12", martini.RenderOptions{
 		Extensions: []string{".html"},
 	}))
