@@ -1,17 +1,10 @@
 package routers
 
 import (
-	"flower/models"
-	"fmt"
-
-	"github.com/martini-contrib/render"
+	"github.com/insionng/martini"
 )
 
-func MainGetHandler(r render.Render) {
-
-	if usr, err := models.GetUserByEmail("insion@sudochina.com"); err != nil {
-		fmt.Println(err)
-	} else {
-		r.HTML(200, "main", usr)
-	}
+func MainGetHandler(ctx *martini.Cotex) {
+	ctx.Data["Version"] = "1.0.1"
+	ctx.HTML(200, "main", ctx.Data)
 }

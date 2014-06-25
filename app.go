@@ -3,23 +3,21 @@ package main
 import (
 	"flower/routers"
 
-	"github.com/go-martini/martini"
-	"github.com/martini-contrib/gzip"
-	"github.com/martini-contrib/render"
+	"github.com/insionng/martini"
 )
 
 func main() {
-	martini.Env = martini.Dev
+
+	martini.Env = martini.Prod
 
 	m := martini.Classic()
-	m.Use(gzip.All())
-	m.Use(martini.Static("static"))
-	m.Use(render.Renderer(render.Options{
+	m.Use(martini.GzipHandler())
+	m.Use(martini.ContextRender("2fd4e1c67a2d28fced849ee1bb76e7391b93eb12", martini.RenderOptions{
 		Extensions: []string{".html"},
 	}))
 
 	m.Get("/", routers.MainGetHandler)
-	m.Get("/topic/:id/", routers.TopicGetHandler)
+	m.Get("/:node/:id/", routers.TopicGetHandler)
 
 	m.NotFound(func() string {
 		return "shit!"

@@ -9170,17 +9170,7 @@ var SwipeView = (function(f, m) {
             return be * ((bd = bd / 1 - 1) * bd * bd + 1) + bb
         }
     });
-    aV.ajaxPrefilter(function(bb) {
-        bb.url = utils.addAjaxState(bb.url);
-        bb.url = utils.addAjaxNum(bb.url)
-    });
-    aV.ajaxSetup({
-        timeout: 20000,
-        error: function(bd, bb, bc) {},
-        headers: {
-            "Aolcom-Ajax": "1"
-        }
-    });
+
     aV.trackImp = function() {
         var bd = aV(".imptrk");
         if (bd.length > 0) {
@@ -9378,49 +9368,7 @@ var SwipeView = (function(f, m) {
         };
         bb.constructor()
     }
-    var i = new h();
-    function ad() {
-        var bb = this;
-        this.bind = function(bc) {
-            aV(bc).each(function() {
-                var bf = aV(this).find("form");
-                var bd = aV(this).find(".entryfrm");
-                var be = aV("div.contest").attr("id");
-                aV(bf).submit(function(bg) {
-                    bg.preventDefault();
-                    aV(bf).find(".submit").click()
-                });
-                aV(bf).find("#submit-button").click(function(bj) {
-                    aV(bf).find(".err").text("");
-                    var bh = aV(bf).find("#email").val();
-                    var bi = a7(bh);
-                    if (!bi) {
-                        aV(bf).find("#emailerr").text("Invalid email");
-                        aV(bf).find("#email").focus();
-                        return
-                    }
-                    if (aV(bf).find("#agree").attr("checked") == false) {
-                        aV(bf).find("#agreeerr").text("Must agree to Terms and Conditions");
-                        aV(bf).find("#agree").focus();
-                        return
-                    }
-                    var bg = aV(bf).serialize();
-                    bg = bg + "&m=contest&p=contest&slot=contest-rightrail";
-                    aV(bd).html("Submitting....");
-                    aV.post("ajax.jsp", bg,
-                    function(bk) {
-                        aV(bd).parents("div.contestr").replaceWith(bk);
-                        bb.bind(".contestr")
-                    },
-                    "html");
-                    omn.omcl("contest_" + be + "_submit_button");
-                    bj.preventDefault()
-                })
-            })
-        };
-        bb.bind(".contestr")
-    }
-    new ad();
+
     function J() {
         var bb = this;
         this.omclDisable = function(bd, bc) {
@@ -9533,15 +9481,6 @@ var SwipeView = (function(f, m) {
             var be = bc.getAjaxParams();
             if (be != null && be != "") {
                 bd += ((bd.indexOf("?") === -1) ? "?": "&") + be
-            }
-            return bd
-        };
-        this.addAjaxNum = function(bd) {
-            if (ajaxCacheNum != null && ajaxCacheNum != "") {
-                bd += ((bd.indexOf("?") === -1) ? "?": "&") + ajaxCacheNum;
-                if (typeof(p_c_n) != "undefined") {
-                    bd += ((bd.indexOf("?") === -1) ? "?": "&") + "_c=" + p_c_n
-                }
             }
             return bd
         };

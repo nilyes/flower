@@ -4,22 +4,7 @@
 		<div class="mnid-footer-search plid-487810 footer-refresh">
 			<form id="aol-footer-search" action="/search" method="get" class="search search-3 tabs-0">
 				<input type="hidden" id="footer-ghostText" value=""/>
-				<input type="hidden" id="footer-enabledTerms" name="enabled_terms" value=""/>
-				<input type="hidden" id="footer-s_it" name="s_it" value="comsearch"/>
-				<input type="hidden" id="footer-s_it_h" value="comsearch"/>
-				<input type="hidden" id="footer-s_it_r" value="comsearch"/>
-				<input type="hidden" id="footer-s_it_f" value="comsearch"/>
-				<input type="hidden" id="footer-s_it_s" value="comsearch"/>
-				<input type="hidden" id="footer-initSmartSearch" value="false"/>
-				<input type="hidden" id="footer-apiDictionary" value=""/>
-				<input type="hidden" id="footer-initFocus" value="true"/>
-				<input type="hidden" id="footer-preserveGhostText" value=""/>
-				<input type="hidden" id="footer-ssExtraParams" value="s_qt=ac"/>
-				<input type="hidden" id="footer-apiIt" value=""/>
-				<input type="hidden" id="footer-apiCount" value="8"/>
-				<input type="hidden" id="footer-apiQueryParam" value="q"/>
-				<input type="hidden" id="footer-enableBestMatch" value="true"/>
-				<input type="hidden" id="footer-bestMatchPrefix" value="in"/>
+
 				<fieldset>
 					<input class="" type="text" value="" id="aol-footer-query" name="q" maxlength="150" title="Search the Web"/>
 					<input class="om_footer-searchbutton lnid-sec2_lnk1" type="submit" value="SEARCH" id="aol-footer-search-button" onclick="omn.omo('footer-searchbutton');" title="Search the Web"/>
@@ -39,27 +24,29 @@
 		<div class="plid-426943 mnid-footerlinks footer-refresh">
 			<div id="ftlinks">
 				<div class="footer-links-row1" id="om_footer_row1_">
-					<a name="om_myaccount" href="http://myaccount.aol.com/" class=" lnid-sec1_lnk1">我的帐号</a>
-					<a href="http://mail.aol.com/" class=" lnid-sec1_lnk2">邮件</a>
-					<a href="/downloads/" class=" lnid-sec1_lnk3">下载</a>
+					<a name="om_myaccount" href="/signup/" class=" lnid-sec1_lnk1">注册帐号</a>
+					<a href="/signin/" class=" lnid-sec1_lnk2">登录账号</a>
+					<a href="/downloads/" class="lnid-sec1_lnk3">下载</a>
 					<a class="feedbackLink lnid-sec1_lnk4" href="/feedback/">帮助 & 反馈</a>
 				</div>
 				<div class="footer-links-row2" id="om_footer_row2_">
 					<a href="/" class=" lnid-sec1_lnk5">梨花儿 Dot Com.</a>
-					<a href="http://privacy.aol.com/" class=" lnid-sec1_lnk6">私隐</a>
-					<a href="http://legal.aol.com/TOS/" class=" lnid-sec1_lnk7">团队</a>
-					<a href="/about-our-ads/" class=" lnid-sec1_lnk8">关于我们的广告</a>
+					<a href="/privacy/" class=" lnid-sec1_lnk6">私隐</a>
+					<a href="/team/" class=" lnid-sec1_lnk7">团队</a>
+					<a href="/ads/" class=" lnid-sec1_lnk8">投放广告</a>
 				</div>
 				<div class="footer-links-row3" id="om_footer_row3_"></div>
 				<div id="aol-copyright"></div>
 			</div>
 		</div>
 	</div>
-	<div class="mpid-4 ">
+
+	<div class="mpid-4">
 		<div id="follow-aol-footer" class="clearfix follow-aol mnid-follow-aol-footer plid-477904 gmod">
 			<h2></h2>
 			<div class=" followaol-icons icons-6">
-				<div class="followaol-icon item1 first" style="">
+				{{/*
+				<div class="followaol-icon item1 first" >
 					<a name="om_follow-aol-footer_item-1" class="lnid-sec2_lnk1" href="http://aol.it/facebook">
 						<span class='sprite item-1 icon- '></span>
 						<span class='title'></span>
@@ -70,7 +57,7 @@
 					</div>
 				</div>
 				<span class="icondivider"></span>
-				<div class="followaol-icon item2" style="">
+				<div class="followaol-icon item2" >
 					<a name="om_follow-aol-footer_item-2" class="lnid-sec2_lnk2" href="http://aol.it/twitter">
 						<span class='sprite item-2 icon- '></span>
 						<span class='title'></span>
@@ -81,7 +68,7 @@
 					</div>
 				</div>
 				<span class="icondivider"></span>
-				<div class="followaol-icon item3" style="">
+				<div class="followaol-icon item3" >
 					<a name="om_follow-aol-footer_item-3" class="lnid-sec2_lnk3" href="http://instagram.com/aol">
 						<span class='sprite item-3 icon- '></span>
 						<span class='title'></span>
@@ -92,7 +79,7 @@
 					</div>
 				</div>
 				<span class="icondivider"></span>
-				<div class="followaol-icon item4" style="">
+				<div class="followaol-icon item4" >
 					<a name="om_follow-aol-footer_item-4" class="lnid-sec2_lnk4" href="newsletter/index.html">
 						<span class='sprite item-4 icon- '></span>
 						<span class='title'></span>
@@ -103,7 +90,8 @@
 					</div>
 				</div>
 				<span class="icondivider"></span>
-				<div class="followaol-icon item5" style="">
+				*/}}
+				<div class="followaol-icon item5 first" >
 					<a name="om_follow-aol-footer_item-5" class="lnid-sec2_lnk5" href="http://bit.ly/cCSb2K">
 						<span class='sprite item-5 icon- '></span>
 						<span class='title'></span>
@@ -113,6 +101,7 @@
 						RSS
 					</div>
 				</div>
+				{{/*
 				<span class="icondivider"></span>
 				<div class="followaol-icon item6 last" style="">
 					<a name="om_follow-aol-footer_item-6" class="lnid-sec2_lnk6" href="http://aolapps.aol.com/">
@@ -124,18 +113,21 @@
 						梨花儿移动
 					</div>
 				</div>
+				*/}}
 				<div class="clear"></div>
 			</div>
 		</div>
 	</div>
-	<div class="mpid-5 ">
+
+	<div class="mpid-5">
 		<div class="plid-426944 mnid-footerlinks-copyright-only footer-refresh">
 			<div id="ftlinks">
 				<div class="footer-links-row1" id="om_footer_row1_"></div>
 				<div class="footer-links-row2" id="om_footer_row2_"></div>
 				<div class="footer-links-row3" id="om_footer_row3_"></div>
 				<div id="aol-copyright">
-					<span class="copy-text">&copy; 2014&nbsp; 梨花儿.</span>
+					<p class="copy-text">Proudly powered by martini.</p>
+					<span class="copy-text">&copy; 2014&nbsp; Lihuaer Dot Com.</span>
 					<a href="/">
 						<img class="footer-stamp-img" pagespeed_lazy_src="/img/logo-ft.png" alt="梨花儿" src="/img/st.gif" onload="pagespeed.lazyLoadImages.loadIfVisible(this);"/>
 					</a>
@@ -154,26 +146,9 @@
 				</div>
 				<div id="search-shadow"></div>
 				<div class="mnid-scrollcurtain-search plid-434088">
-					<form id="aol-scrollcurtain-search" action="http://search.aol.com/aol/search" method="get" class="search search-3 tabs-0">
+					<form id="aol-scrollcurtain-search" action="/search" method="get" class="search search-3 tabs-0">
 						<input type="hidden" id="scrollcurtain-ghostText" value=""/>
-						<input type="hidden" id="scrollcurtain-enabledTerms" name="enabled_terms" value=""/>
-						<input type="hidden" id="scrollcurtain-s_it" name="s_it" value="comsearch"/>
-						<input type="hidden" id="scrollcurtain-s_it_h" value="comsearch"/>
-						<input type="hidden" id="scrollcurtain-s_it_r" value="comsearch"/>
-						<input type="hidden" id="scrollcurtain-s_it_f" value="comsearch"/>
-						<input type="hidden" id="scrollcurtain-s_it_s" value="comsearch"/>
-						<input type="hidden" id="scrollcurtain-initSmartSearch" value="false"/>
-						<input type="hidden" id="scrollcurtain-apiDictionary" value=""/>
-						<input type="hidden" id="scrollcurtain-ssExtraParams" value="s_qt=sa"/>
-						<input type="hidden" id="scrollcurtain-sExtraParams" value="s_qt=sh"/>
-						<input type="hidden" id="scrollcurtain-apiIt" value=""/>
-						<input type="hidden" id="scrollcurtain-apiUrl" value="http://autocomplete.search.aol.com/autocomplete/get"/>
-						<input type="hidden" id="scrollcurtain-apiCount" value="8"/>
-						<input type="hidden" id="scrollcurtain-apiQueryParam" value="q"/>
-						<input type="hidden" id="scrollcurtain-enableBestMatch" value="true"/>
-						<input type="hidden" id="scrollcurtain-bestMatchQuery" value="bm_chan=2&bm_max=1&bm_limit=4"/>
-						<input type="hidden" id="scrollcurtain-bestMatchPrefix" value="in"/>
-						<input type="hidden" id="scrollcurtain-bestMatchAction" value="http://search.aol.com/aol/tracking"/>
+
 						<fieldset>
 							<input class="" type="text" value="" id="aol-scrollcurtain-query" name="q" maxlength="150" title="Search the Web"/>
 							<input class="om_scrollcurtain-searchbutton lnid-sec2_lnk1" type="submit" value="Search" id="aol-scrollcurtain-search-button" onclick="omn.omo('scrollcurtain-searchbutton');" title="Search the Web"/>
